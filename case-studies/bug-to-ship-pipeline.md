@@ -23,7 +23,9 @@ A three-step pipeline where each step has one job:
    Claude created a "Bug Bash & Go-Live Readiness" milestone, checked for duplicates, and filed a
    structured ticket: repro steps, expected vs. actual, PASS/FAIL acceptance criteria,
    cross-platform test cases (web, iOS, Android), and **diagnostic steps specific to that bug**.
-   That workflow is now the [`bug-bash-linear`](../workflows/bug-bash-linear) skill.
+   That workflow is now the [`bug-bash-linear`](../workflows/bug-bash-linear) skill, with
+   [setup steps](../workflows/bug-bash-linear/README.md#set-up-your-own-bug-bash-chat-about-5-minutes)
+   for running your own bug bash chat.
 2. **Handoff.** Every ticket got a copy-paste "session protocol" comment: one bug only, trace the data
    path (DB schema -> API route -> client fetch -> component render), present a diagnosis, wait for
    approval, then fix. For batches, Claude ordered tickets by likely root cause ("START HERE") and grouped

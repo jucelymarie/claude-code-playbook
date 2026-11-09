@@ -28,10 +28,25 @@ here"), and writes a ready-to-send handoff for a teammate.
 Product managers, founders, QA testers, and anyone who tests software and works with AI coding
 agents or developers to get it fixed.
 
-## Setup
+## Set up your own bug bash chat (about 5 minutes)
 
-- **Needs:** Claude (chat or Claude Code) with the Linear connector.
-- **Install:** paste `SKILL.md` into a Claude project's instructions, or copy this folder to `~/.claude/skills/bug-bash-linear/`.
-- **Try it:** share a screenshot and say "bug bash: the save button does nothing on my phone."
+The workflow itself is [`SKILL.md`](SKILL.md). This is how to run it the way I did, in a Claude chat:
+
+1. **Connect Linear to Claude.** In Claude (claude.ai or the desktop app), open Settings, then
+   Connectors, and connect Linear.
+2. **Create a Claude project** called something like "Bug Bash".
+3. **Paste the contents of [`SKILL.md`](SKILL.md) into the project's Instructions.**
+4. **Start a chat in that project** and tell it where tickets go, for example:
+   *"Our Linear team is Product, the project is Release 1.0. Create a Bug Bash & Go-Live Readiness
+   milestone if it doesn't exist. We ship on web, iOS, and Android."*
+5. **Start testing.** Whenever you find something, drop a screenshot and a sentence in the chat:
+   *"Bug bash: the save button does nothing on my phone."* Claude files the ticket and replies
+   "Ready for bug #2."
+
+When it's time to fix, open each ticket's "Claude Code Session Protocol" comment, paste it into a
+fresh Claude Code session, and work that one bug.
+
+**Prefer Claude Code for intake too?** Copy this folder to `~/.claude/skills/bug-bash-linear/`
+with the Linear MCP connected, and use the same prompts.
 
 See it in context: [case study](../../case-studies/bug-to-ship-pipeline.md).
