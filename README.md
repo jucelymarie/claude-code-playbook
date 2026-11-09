@@ -15,7 +15,7 @@ removed so they work in any project.
 
 | Skill | What it does |
 |---|---|
-| [`ui-design-review`](taste/ui-design-review) | Audits a screen, renders 5 distinct mockups in one interactive HTML file, and blocks implementation until you pick one |
+| [`ui-design-review`](taste/ui-design-review) | A design review for every UI change or new screen: 5 different options to compare in your browser, and nothing gets built until you pick one |
 | [`designer-first-site-build`](taste/designer-first-site-build) | Keeps AI-built websites editable by the client: native elements and CMS content instead of hard-coded pages, for Webflow or any visual builder (Webflow notes field-tested) |
 
 ### GTM: AI pointed at revenue work

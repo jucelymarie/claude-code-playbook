@@ -1,19 +1,19 @@
 ---
 name: ui-design-review
 description: >
-  Use this skill whenever the user wants to redesign, revamp, or improve a UI page or feature —
-  especially when they reference a screenshot, image, or existing screen and want new mockups or
-  design options before writing code. Triggers on phrases like "redesign this page", "create mockups",
-  "design agent team", "get design options", "show me mockup concepts", "review the current UI",
-  "present design options", or any request that combines a UI change with wanting to see options before
-  implementing. Also use when a user shares a screenshot and asks to improve, modernize, or match
-  a brand style. This skill gates implementation behind user approval of a selected mockup — it never
-  writes implementation code until the user has reviewed and selected a design.
+  Use this skill for ANY user interface work: creating a new screen, page, or component, changing an
+  existing one, redesigning, restyling, or adding fields or sections to a UI. Use it whenever the user
+  asks for a screen change or creation, shares a screenshot or mockup of a UI, or asks to improve,
+  modernize, or match a brand style. Triggers include "add a page", "build a screen", "change the layout",
+  "redesign this", "create mockups", "show me options", and any request whose result is something a user
+  will see and interact with. This skill gates implementation behind user approval of a selected
+  mockup: it never writes implementation code until the user has reviewed and selected a design.
 ---
 
 # UI Design Review Skill
 
-A structured workflow for redesigning UI pages: analyze the current state, generate 5 mockup
+A structured workflow for any UI change or new screen: analyze the current state (or, for a new
+screen, the neighboring screens it must fit with), generate 5 mockup
 concepts rendered as interactive HTML for in-browser review, collect user feedback and selection,
 then produce an implementation plan and test plan for the chosen design only.
 
@@ -40,7 +40,7 @@ Confirm the worktree was created and report the branch name to the user. Then pr
 
 **Read before designing.** Do all of the following:
 
-1. **Identify the current implementation files** — find the component/page file(s) for the feature being redesigned. Read them fully.
+1. **Identify the current implementation files** — find the component/page file(s) for the feature being changed and read them fully. For a brand-new screen, read the closest existing screens and the navigation it will live in, so the new screen matches them.
 
 2. **Identify what must NOT break** — look for:
    - Existing working flows (the user will often say "this currently works, protect it")

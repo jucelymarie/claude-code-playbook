@@ -1,14 +1,35 @@
 # ui-design-review
 
-Redesign a UI screen without jumping straight to code. Claude reads the current implementation,
-runs a three-role design audit (UX, brand consistency, accessibility/mobile), renders **5 distinct
-mockups in one interactive HTML file**, and stops. Implementation and test plans are written only
-for the design you pick.
+**See your options before anything gets built.**
 
-**Why it exists:** the most expensive UI rework comes from building the first idea. A hard approval
-gate before any code moves the debate to a cheap artifact.
+Ask an AI coding agent for a new screen or a change to an existing one, and it builds the first idea it
+has. If that idea is wrong, you find out after the code is written, and every round of "not quite"
+costs another rebuild. It's the same problem as a developer building from a vague ticket, only faster.
 
-- **Needs:** Claude Code, a git repo. Works best when the project has a brand reference (landing page, style guide, or `DESIGN.md`).
+This skill puts a design review in front of every UI change:
+
+- **It reads what exists first:** the current screen, or for a new screen, the screens around it,
+  the brand style, and the flows that must not break.
+- **It runs a quick design audit** from three angles: ease of use, brand consistency, and
+  mobile and accessibility.
+- **It shows you 5 genuinely different designs** in one page you open in your browser. Pick one, add
+  feedback, and paste your choice back.
+- **Nothing gets built until you choose.** Then it writes the build plan for that design only, plus
+  pass/fail test cases and a checklist the agent must clear before calling the work done.
+
+## When to use it
+
+Any time the result is something a user will see: a new page, screen, or component; a layout change;
+new fields on a form; a restyle to match the brand. If it touches the UI, it goes through review first.
+
+## Who it's for
+
+Founders, product managers, and designers who direct AI coding agents and want to decide what gets
+built, instead of reacting to what got built.
+
+## Setup
+
+- **Needs:** Claude Code in your project. Works best when the project has a brand reference: a
+  landing page, a style guide, or a `DESIGN.md`.
 - **Install:** copy this folder to `~/.claude/skills/ui-design-review/` (or `.claude/skills/` in a project).
-- **Try it:** "Redesign the settings page to match our landing page. Show me options first."
-- **You get:** a mockup HTML file with select-and-feedback buttons, then (after you choose) an implementation plan, a session protocol to paste into Claude Code, and PASS/FAIL test cases.
+- **Try it:** "Add a profile settings screen that matches our landing page."
