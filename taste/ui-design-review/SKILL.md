@@ -52,7 +52,9 @@ Confirm the worktree was created and report the branch name to the user. Then pr
    - Read that page or style guide if it is in the codebase (also check for a DESIGN.md)
    - Or ask the user: "Can you share a screenshot or URL of the page whose visual style I should match?"
 
-4. **Extract the design system** — from existing components, note: color tokens, font sizes, spacing patterns, card designs, button styles, border-radius values, and any Tailwind utility patterns in use.
+4. **Extract the design system** — from existing components, note: color tokens, font sizes, spacing patterns, card designs, button styles, border-radius values, and any Tailwind utility patterns in use. If the project has a design system or guidelines file (`DESIGN.md`, a style guide, a component library), read it first: it is the source of truth.
+
+5. **Map the screen conventions** — the placement rules users have already learned. Note where common controls live on existing screens and how they look: primary and secondary actions (position, order, style), back/close, page headers and titles, navigation, empty states, loading and error states, form layout and labels, confirmation dialogs. Also list the existing shared components (buttons, cards, inputs, modals) that the new design must reuse instead of re-creating.
 
 Summarize findings in a brief diagnostic before proceeding to Phase 2:
 
@@ -61,6 +63,8 @@ Current implementation: [file paths]
 Must-protect flows: [list]
 Brand reference captured: [yes/no — what you found]
 Design system tokens: [key values]
+Screen conventions: [where primary/secondary actions, back, headers, nav live; how they look]
+Shared components to reuse: [list]
 New fields required: [from user's prompt]
 ```
 
@@ -74,7 +78,7 @@ Simulate a 3-role design team reviewing the current UI. Keep this concise — on
 
 **Agent 1 — UX Critic:** What is broken or frustrating about the current UI? Focus on flow, clarity, and user cognitive load.
 
-**Agent 2 — Brand Consistency Checker:** Does the current UI match the brand reference tone, typography, and visual language? What's misaligned?
+**Agent 2 — Brand & Consistency Checker:** Does the current UI match the brand reference tone, typography, and visual language? What's misaligned? Are common controls (primary actions, back, headers, nav) in the same place and style as on other screens? Flag any one-off button styles, spacing, or components that should be the shared version.
 
 **Agent 3 — Accessibility & Mobile Reviewer:** What responsiveness or accessibility issues exist? What must any new design fix?
 
@@ -99,6 +103,8 @@ Generate 5 distinct design directions as a **single interactive HTML file** the 
 - Each mockup must render the new fields specified by the user (don't leave them as `[placeholder]`)
 
 ### Mockup Concepts to Generate
+
+**Consistency rule for every concept:** concepts vary how the screen's own content is laid out, never the shared conventions. All 5 keep common controls in their established spots and styles, use the existing shared components, and follow the design system. A concept that breaks a convention must say so in its rationale and explain why the break is worth it.
 
 Each concept must be meaningfully different — not just color swaps:
 
@@ -165,6 +171,8 @@ Run this check before creating the PR:
 - [ ] Responsive layout tested at 375px, 768px, 1280px
 - [ ] All sections from selected mockup are present in the implementation
 - [ ] Styling matches existing app patterns (card designs, spacing, colors, border-radius)
+- [ ] Common controls (primary/secondary actions, back, headers, nav) are in the same place and style as on other screens
+- [ ] Shared components are reused; no new one-off button, card, or input variants unless the plan called for them
 - [ ] New fields render correctly and validation works
 - [ ] Existing protected flows still pass manually (test each one listed above)
 - [ ] No console errors on page load or interaction
@@ -197,6 +205,8 @@ WHEN IMPLEMENTING FROM THE MOCKUP SPEC:
     verify responsive layout at 375px, 768px, 1280px
     verify all sections from the selected mockup are present
     verify styling matches existing app patterns (cards, spacing, colors)
+    verify common controls sit in the same place and style as on other screens
+    verify shared components are reused, not re-created
     verify new fields render and validate correctly
     verify all protected flows still work manually
     verify no console errors on page load or interaction

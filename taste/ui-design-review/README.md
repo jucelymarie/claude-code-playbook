@@ -10,9 +10,14 @@ This skill puts a design review in front of every UI change:
 
 - **It reads what exists first:** the current screen, or for a new screen, the screens around it,
   the brand style, and the flows that must not break.
-- **It runs a quick design audit** from three angles: ease of use, brand consistency, and
-  mobile and accessibility.
-- **It shows you 5 genuinely different designs** in one page you open in your browser. Pick one, add
+- **It keeps the app consistent.** AI agents building a new screen tend to put common buttons in a
+  new spot or give them a new style, so the app slowly stops feeling like one product. This skill
+  maps where things already live (main actions, back, headers, navigation), follows your design
+  system and guidelines, and reuses your existing buttons, cards, and forms instead of inventing new ones.
+- **It runs a quick design audit** from three angles: ease of use, brand and consistency,
+  and mobile and accessibility.
+- **It shows you 5 genuinely different designs** in one page you open in your browser. The
+  designs differ in how the screen's content is arranged, not in where the familiar controls go. Pick one, add
   feedback, and paste your choice back.
 - **Nothing gets built until you choose.** Then it writes the build plan for that design only, plus
   pass/fail test cases and a checklist the agent must clear before calling the work done.
