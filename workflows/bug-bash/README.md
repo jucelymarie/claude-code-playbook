@@ -1,4 +1,4 @@
-# bug-bash-linear
+# bug-bash
 
 **A parking lot for bugs, so every fix stays focused.**
 
@@ -14,7 +14,8 @@ This skill fixes the workflow, not the code:
 
 - **While testing, drop anything unrelated into a separate "bug bash" chat** with a screenshot and a
   sentence. You don't have to write a ticket or know the cause.
-- **Claude turns it into a complete Linear ticket**: what's broken, how to reproduce it, what "fixed"
+- **Claude turns it into a complete ticket in the tool your team already uses** (Linear, Jira, Azure DevOps,
+  GitHub Issues, and others): what's broken, how to reproduce it, what "fixed"
   looks like (clear pass/fail checks), and which devices to verify on. It checks for duplicates first.
 - **Every ticket comes with its own focused session instructions**: work on this one bug only, find
   the cause and get approval before changing anything, and don't drift into other issues.
@@ -38,22 +39,24 @@ agents or developers to get it fixed.
 
 The workflow itself is [`SKILL.md`](SKILL.md). This is how to run it the way I did, in a Claude chat:
 
-1. **Connect Linear to Claude.** In Claude (claude.ai or the desktop app), open Settings, then
-   Connectors, and connect Linear.
+1. **Connect your tracker to Claude.** In Claude (claude.ai or the desktop app), open Settings, then
+   Connectors, and connect Linear, Jira, Azure DevOps, or whichever tool your team uses. No tracker?
+   Skip this step and the skill writes tickets to a file you can paste in later.
 2. **Create a Claude project** called something like "Bug Bash".
 3. **Paste the contents of [`SKILL.md`](SKILL.md) into the project's Instructions.**
-4. **Start a chat in that project** and tell it where tickets go, for example:
-   *"Our Linear team is Product, the project is Release 1.0. Create a Bug Bash & Go-Live Readiness
-   milestone if it doesn't exist. We ship on web, iOS, and Android."*
+4. **Start a chat in that project.** On the first run it finds your connected tracker and asks where
+   tickets should go. Answer in plain words, for example:
+   *"Use Jira, project Product, for the Release 1.0 version. Group these under a Bug Bash & Go-Live
+   Readiness epic. We ship on web, iOS, and Android."*
 5. **Start testing.** Whenever you find something, drop a screenshot and a sentence in the chat:
    *"Bug bash: the save button does nothing on my phone."* Claude files the ticket and replies
    "Ready for bug #2."
 
-When it's time to fix, open each ticket's "Claude Code Session Protocol" comment, paste it into a
+When it's time to fix, open each ticket's "Session Protocol" comment, paste it into a
 fresh Claude Code session, and work that one bug.
 
-**Prefer Claude Code for intake too?** Copy this folder to `~/.claude/skills/bug-bash-linear/`
-with the Linear MCP connected, and use the same prompts.
+**Prefer Claude Code for intake too?** Copy this folder to `~/.claude/skills/bug-bash/`
+with your tracker's MCP connected, and use the same prompts.
 
 ## How I used it
 
@@ -68,6 +71,9 @@ Claude Code session.
   instead of a guess.
 - **Repeat trouble spots got warnings.** Photo uploads, the wrong profile showing up, data permissions,
   and user roles kept breaking, so tickets touching them carried an extra caution note.
+- **I ran it on Linear.** [`references/linear.md`](references/linear.md) holds what I learned about
+  Linear specifically. For other trackers the workflow is the same, and you can add a reference
+  file with what you learn.
 - **It was used, not just designed:** 44 of my commits to the platform reference a Linear ticket.
 
 <!-- TODO: add one real example, scrubbed (no company or user names, no ticket IDs): the screenshot

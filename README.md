@@ -29,7 +29,7 @@ removed so they work in any project.
 
 | Skill | What it does |
 |---|---|
-| [`bug-bash-linear`](workflows/bug-bash-linear) | A parking lot for bugs found while testing: drop in a screenshot and a sentence, get a complete ticket, and keep every fixing session on one bug |
+| [`bug-bash`](workflows/bug-bash) | A parking lot for bugs found while testing: drop in a screenshot and a sentence, get a complete ticket in Linear, Jira, Azure DevOps, or your tracker, and keep every fixing session on one bug |
 
 ## Install a skill
 
