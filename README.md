@@ -41,7 +41,8 @@ right away. Each one fixes a mistake AI coding agents make when nobody tells the
 | [`bug-bash`](workflows/bug-bash) | Piling every bug you find into one session until the agent loses track and breaks things. Park new bugs as tickets in Linear, Jira, or your tracker, and fix one at a time. |
 
 **Not sure where to start?** Try `ui-design-review` next time you want a screen changed, or
-`bug-bash` the next time you test your app. Neither needs anything extra connected.
+`bug-bash` the next time you test your app. Neither needs a connector to get started
+(without one, `bug-bash` writes tickets to a file you can paste into your tracker later).
 
 ## Install a skill
 
