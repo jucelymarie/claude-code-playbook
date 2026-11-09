@@ -75,11 +75,3 @@ Claude Code session.
   Linear specifically. For other trackers the workflow is the same, and you can add a reference
   file with what you learn.
 - **It was used, not just designed:** 44 of my commits to the platform reference a Linear ticket.
-
-<!-- TODO: add one real example, scrubbed (no company or user names, no ticket IDs): the screenshot
-     and sentence you dropped in, the ticket it became, and what the fix was. -->
-
-## What I'd change
-
-<!-- TODO: your honest take. For example: attach screenshots automatically, or have the fixing
-     session post its diagnosis back to the ticket so the loop closes on its own. -->

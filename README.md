@@ -1,6 +1,5 @@
 # Claude Code Playbook
 
-<!-- DRAFT OPENER: rewrite these three sentences in your own voice before publishing. -->
 I build AI agent workflows that do real work: filing and fixing bugs, shipping client sites,
 and running grounded marketing campaigns. I came to this from sales and marketing automation,
 and co-founded and shipped a hospitality platform (web, iOS, Android) with Claude Code.
