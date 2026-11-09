@@ -3,7 +3,6 @@
 I build AI agent workflows that do real work: filing and fixing bugs, shipping client sites,
 and running grounded marketing campaigns. I came to this from sales and marketing automation,
 and co-founded and shipped a hospitality platform (web, iOS, Android) with Claude Code.
-I'm looking for an AI solutions / applied-AI role where I build these systems with and for customers.
 
 These are the Claude Code skills I wrote and used in production, with company and client details
 removed so they work in any project.
