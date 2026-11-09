@@ -4,11 +4,16 @@
 
 ## The problem
 
-Before launching our hospitality platform to real users, we had to clear every bug blocking the move from staging to
-production. Bugs were turning up in screenshots, texts, and memory, and our Claude Code fix sessions
-tended to drift: an agent would start on one bug, patch the wrong layer, and wander into a second one.
+Before launching our hospitality platform to real users, I tested every flow as a business user and
+had to clear every bug blocking the move to production. Testing one thing, I'd find three others.
 
-<!-- TODO: one or two sentences in your words on what that cost (rework, a fix that broke another platform, etc.). -->
+I'd seen what happens next with developers long before AI: someone has an assigned bug, you mention
+"I also found this," they start on it, lose track of the original job, and break something that worked.
+AI coding agents behave the same way. Every unrelated bug I added to a fixing session muddied the
+context and made it more likely the agent would fix the wrong thing.
+
+So I separated *finding* bugs from *fixing* them. Anything unrelated went into a bug bash chat, and
+each fixing session got exactly one bug.
 
 ## What I built
 

@@ -29,7 +29,7 @@ removed so they work in any project.
 
 | Skill | What it does |
 |---|---|
-| [`bug-bash-linear`](workflows/bug-bash-linear) | Screenshot + sentence to a Linear ticket with diagnose-before-code steps and a one-bug-per-session protocol |
+| [`bug-bash-linear`](workflows/bug-bash-linear) | A parking lot for bugs found while testing: drop in a screenshot and a sentence, get a complete ticket, and keep every fixing session on one bug |
 
 ## Case study
 
