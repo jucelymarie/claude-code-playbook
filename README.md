@@ -16,7 +16,7 @@ removed so they work in any project.
 | Skill | What it does |
 |---|---|
 | [`ui-design-review`](taste/ui-design-review) | Audits a screen, renders 5 distinct mockups in one interactive HTML file, and blocks implementation until you pick one |
-| [`webflow-native-build`](taste/webflow-native-build) | Field-tested Webflow MCP playbook: exact tool-call shapes, silent failures, hard limits, client-editable patterns |
+| [`designer-first-site-build`](taste/designer-first-site-build) | Keeps AI-built websites editable by the client: native elements and CMS content instead of hard-coded pages, for Webflow or any visual builder (Webflow notes field-tested) |
 
 ### GTM: AI pointed at revenue work
 

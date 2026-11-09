@@ -1,13 +1,7 @@
----
-name: webflow-native-build
-description: Build and edit Webflow sites natively via the Webflow MCP Data API — element/style/CMS/component schema quirks, binding keys, collection-list filters, hard platform limits, and proven patterns (fixed banner frames, CMS-driven catalogs, heading rows). Use whenever doing substantial Webflow MCP work so known traps aren't rediscovered.
----
+# Webflow reference (field-tested)
 
-# Webflow native builds via the MCP Data API
-
-Field-tested playbook from a production client build. Core principle: everything visual lives as
-native Designer styles/elements/CMS bindings so Designer === preview and clients can edit;
-scripts carry behavior only. The Designer canvas does NOT run footer scripts or custom code —
+Platform notes for applying the designer-first rules in `../SKILL.md` to Webflow through the
+Webflow MCP Data API. Learned on a production client build. The Designer canvas does NOT run footer scripts or custom code —
 anything script-injected is invisible there.
 
 ## Tool-call schema quirks (exact shapes that work)
