@@ -23,6 +23,12 @@ This skill fixes the workflow, not the code:
 It also keeps a running tally during a test pass, flags which bug is probably causing others ("start
 here"), and writes a ready-to-send handoff for a teammate.
 
+## When to use it
+
+- **Before a launch or release**, when you're testing every flow and finding more than one problem at a time.
+- **During any fixing session** where you spot something unrelated: park it here instead of adding it to the current session.
+- **When the person testing isn't the person fixing,** so the bug report needs to stand on its own.
+
 ## Who it's for
 
 Product managers, founders, QA testers, and anyone who tests software and works with AI coding
@@ -49,4 +55,25 @@ fresh Claude Code session, and work that one bug.
 **Prefer Claude Code for intake too?** Copy this folder to `~/.claude/skills/bug-bash-linear/`
 with the Linear MCP connected, and use the same prompts.
 
-See it in context: [case study](../../case-studies/bug-to-ship-pipeline.md).
+## How I used it
+
+I built this while getting a hospitality platform (web, iOS, Android) ready for real users. I tested
+as a business user, dropped every finding into the bug bash chat, and worked the tickets one per
+Claude Code session.
+
+- **Finding and fixing were separate jobs.** I owned the bug bash chat, the ticket format, and the
+  Linear setup. My co-founder, Samuel Rivera, built the Claude Code skill that picked up a ticket and
+  carried it to a pull request.
+- **The plan for finding the cause lived in the ticket,** so each fixing session started from a plan
+  instead of a guess.
+- **Repeat trouble spots got warnings.** Photo uploads, the wrong profile showing up, data permissions,
+  and user roles kept breaking, so tickets touching them carried an extra caution note.
+- **It was used, not just designed:** 44 of my commits to the platform reference a Linear ticket.
+
+<!-- TODO: add one real example, scrubbed (no company or user names, no ticket IDs): the screenshot
+     and sentence you dropped in, the ticket it became, and what the fix was. -->
+
+## What I'd change
+
+<!-- TODO: your honest take. For example: attach screenshots automatically, or have the fixing
+     session post its diagnosis back to the ticket so the loop closes on its own. -->

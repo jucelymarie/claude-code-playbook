@@ -31,10 +31,6 @@ removed so they work in any project.
 |---|---|
 | [`bug-bash-linear`](workflows/bug-bash-linear) | A parking lot for bugs found while testing: drop in a screenshot and a sentence, get a complete ticket, and keep every fixing session on one bug |
 
-## Case study
-
-- [From screenshot to merged fix: a bug-bash pipeline with Claude and Linear](case-studies/bug-to-ship-pipeline.md)
-
 ## Install a skill
 
 ```bash
